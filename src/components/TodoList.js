@@ -30,15 +30,15 @@ const items = [
   },
 ];
 
-const TodoList = (props) => {
+const TodoList = ({ customCss }) => {
   return (
-    <div className={props.className}>
+    <div className={customCss}>
       <h2>{`You have ${items.length}  list todo!`}</h2>
       {items.map((item) => {
         return (
           <>
             <Todo
-              className={"list"}
+              TodoClass={"list"}
               taskName={item.task}
               description={item.description}
               datetime={item.datetime}
