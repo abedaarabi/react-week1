@@ -22,6 +22,12 @@ const items = [
     datetime: "Fri Sep 15 2017",
     deadline: "07:15",
   },
+  {
+    task: "sleep",
+    description: "Sleep is a naturally recurring state of mind and body",
+    datetime: "Fri Sep 16 2017",
+    deadline: "22:15",
+  },
 ];
 
 const TodoList = (props) => {
