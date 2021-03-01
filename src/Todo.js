@@ -14,12 +14,13 @@ const todos = [
     description: "Eat breakfast",
   },
 ];
-function Add({ item, onRemove }) {
+
+function Add({ item, onRemove, customCssButton, css }) {
   return (
     <div>
       <input type="checkbox" id={item.id} />
-      <label> {item.description}</label>
-      <button on onClick={onRemove}>
+      <label className={css}> {item.description}</label>
+      <button className={customCssButton} onClick={onRemove}>
         Delete
       </button>
     </div>
@@ -32,15 +33,36 @@ function List() {
     const newList = addtodo.filter((item) => item.id !== id);
     setAddTodo(newList);
   }
-  function addTodos() {
-    setAddTodo(addtodo);
-  }
+  const rendomText = () => {
+    return todos.map((item) => {
+      return item.description;
+    });
+  };
+  const newText = rendomText();
+
+  const randomMonth = newText[Math.floor(Math.random() * newText.length)];
+
+  const addItem = () => {
+    setAddTodo(
+      addtodo.concat({
+        id: Math.floor(Math.random() * 100),
+        description: randomMonth,
+      })
+    );
+  };
   return (
     <div>
-      <button onClick={addTodos}>Add Todo</button>
+      <button onClick={addItem} className={"addTodo"}>
+        Add Todo
+      </button>
       {addtodo.map((item) => (
-        <div key={item.id.toString()}>
-          <Add item={item} onRemove={() => removeItem(item.id)} />
+        <div key={item.id}>
+          <Add
+            customCssButton={"CutomButton"}
+            css={"text"}
+            item={item}
+            onRemove={() => removeItem(item.id)}
+          />
         </div>
       ))}
     </div>

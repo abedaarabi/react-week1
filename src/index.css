@@ -5,14 +5,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(28, 139, 207);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h3 {
+  color: aliceblue;
+}
 
 input[type="checkbox"]:checked + label {
-  color: red;
+  color: rgb(217, 255, 0);
   text-decoration: line-through;
+}
+
+.test {
+  background-color: aliceblue;
+}
+
+.CutomButton {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+}
+.addTodo {
+  background-color: #eb554b;
+  border: none;
+  color: white;
+  width: 400px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+}
+.text {
+  background-color: rgb(121, 116, 116);
+  padding: 8px;
+  margin: 10px;
+  font-size: large;
+  color: aliceblue;
+  border-left: 5px salmon solid;
 }
