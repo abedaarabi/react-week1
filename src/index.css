@@ -21,6 +21,15 @@ input[type="checkbox"]:checked + label {
   text-decoration: line-through;
 }
 
+input[type="checkbox"]:not(:checked) {
+  position: relative;
+  padding-left: 2.3em;
+  font-size: 1.05em;
+  line-height: 1.7;
+  cursor: pointer;
+  background-color: red;
+}
+
 .test {
   background-color: aliceblue;
 }
@@ -57,4 +66,17 @@ input[type="checkbox"]:checked + label {
   font-size: large;
   color: aliceblue;
   border-left: 5px salmon solid;
+}
+
+.noItem {
+  background-color: #3b3b3b;
+  margin: auto;
+  margin-top: 80px;
+  width: 40%;
+  border-right: 8px solid rgb(223, 86, 86);
+  border-left: 8px solid rgb(223, 86, 86);
+  padding: 10px;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: larger;
 }
